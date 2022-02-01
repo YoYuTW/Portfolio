@@ -1,0 +1,13 @@
+.project-card {
+  border: 1px #fff solid;
+  height: 100vw;
+  margin: 0 10vw;
+}
+
+.project-card>img {
+  height: 42%;
+  object-fit: cover;
+}
+.project-card>p {
+  height: 20%;
+}

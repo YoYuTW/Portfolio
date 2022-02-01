@@ -29,14 +29,15 @@ function About() {
     CSS3: "devicon-css3-plain colored",
     JavaScript: "devicon-javascript-plain colored",
     ReactJS: "devicon-react-original colored",
-    Nodejs: "devicon-nodejs-plain-wordmark",
+    Nodejs: "devicon-nodejs-plain",
     express: "devicon-express-original colored",
     MongoDB: "devicon-mongodb-plain",
     vscode: "devicon-vscode-plain colored",
     git: "devicon-git-plain",
     jest: "devicon-jest-plain colored",
     webpack: "devicon-webpack-plain",
-    sass: "devicon-sass-original colored"
+    sass: "devicon-sass-original colored",
+    TypeScript: "devicon-typescript-plain",
   };
 
   return (
@@ -49,6 +50,7 @@ function About() {
       >
         <h2 ref={aboutRef}>About me</h2>
       </CSSTransition>
+      <div className="para">
       <CSSTransition
         in={scrollHeight > 0.33}
         classNames='contents'
@@ -58,10 +60,10 @@ function About() {
         <p ref={paraRef}>
           My first encounter with JavaScript happened one and half year ago, when I was a project manager intern,
           and the first time I tasted the power of coding.
-          Currently I am a full-time self-taught coder followed with 
-          <a href="https://www.theodinproject.com/">The Odin Project</a>.
+          Currently I am a full-time self-taught coder followed with <a href="https://www.theodinproject.com/">The Odin Project</a>.
         </p>
       </CSSTransition>
+      </div>
       <CSSTransition
         in={scrollHeight > 0.45}
         classNames="run-in"
