@@ -7,10 +7,10 @@ import projects from '../asset/index';
 
 function Project() {  
   return (
-    <div>   
+    <div className="project">   
       <h2>Project</h2>
       <div className="project-gallery">        
-        <Carousel useKeyboardArrows={true} centerMode={true} showStatus={false} showThumbs={false}>
+        <Carousel useKeyboardArrows={true} centerMode={true} showStatus={false} showThumbs={false} showIndicators={false}>
           {projects.map(project => 
             <ProjectDemo {...project} key={project.name}/>)}          
         </Carousel>        

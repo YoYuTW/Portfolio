@@ -41,7 +41,7 @@ function About() {
   };
 
   return (
-    <div>   
+    <div className="about">   
       <CSSTransition
         in={scrollHeight > 0.3}
         classNames="run-in"
@@ -50,7 +50,6 @@ function About() {
       >
         <h2 ref={aboutRef}>About me</h2>
       </CSSTransition>
-      <div className="para">
       <CSSTransition
         in={scrollHeight > 0.33}
         classNames='contents'
@@ -63,7 +62,6 @@ function About() {
           Currently I am a full-time self-taught coder followed with <a href="https://www.theodinproject.com/">The Odin Project</a>.
         </p>
       </CSSTransition>
-      </div>
       <CSSTransition
         in={scrollHeight > 0.45}
         classNames="run-in"

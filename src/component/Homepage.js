@@ -4,10 +4,13 @@ import './Homepage.css';
 function Homepage() {
   return (
     <div className="homepage">   
-      <div />
       <div>
         <h1>Chen YoYu</h1>
-        <h3>A Problem Solver</h3>
+        <h3>Taipei, Taiwan</h3>
+      </div>
+      <div className="language">
+        <button>中</button>/
+        <button className="language-select">En</button>
       </div>
     </div>
   )

@@ -4,25 +4,6 @@
   align-items: center;
 }
 
-.center-project {
-  transform-origin: center;
-  /*transform: translateX(0);*/
-  min-width: 60vw;
-}
-
-.left-project {
-  transform-origin: center;
-  /*transform: translateX(-80%);*/
-  max-width: 15vw;
-}
-
-.right-project {
-  transform-origin: center;
-  /*transform: translateX(80%);*/
-  max-width: 15vw;
-}
-
-.hidden-project {
-  opacity: 0;
-  transform-origin: center;
+.carousel-root {
+  overflow: hidden;
 }

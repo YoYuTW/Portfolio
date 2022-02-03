@@ -1,12 +1,12 @@
-div {
+.about {
   overflow: hidden;
 }
 
-h2 {
+.about>h2 {
   transform-origin: center;
 }
 
-p {
+.about>p {
   text-align: left;
   margin: 0 30px 20px;
 }
@@ -16,43 +16,8 @@ p {
   grid-template-columns: repeat(3,80px);
   grid-template-rows: repeat(auto-fit,130px);
   justify-content: space-between;
-  margin: 0 30px;
+  margin: 10px 30px;
   gap:10px 20px;
-}
-
-i {
-  font-size: 72px;
-}
-
-.skill:hover {
-  transform-origin: 0 0;
-  transform: scale(1.1);
-}
-
-.fadein-enter {
-  transform: scale(0);
-}
-
-.fadein-enter-active {
-  transform: scale(1);
-  transition: transform 1.2s ease-in-out;
-}
-
-.fadein-enter-done {
-  transform: scale(1);
-}
-
-.fadein-exit {
-  transform: scale(1);
-}
-
-.fadein-exit-active {
-  transform: scale(0);
-  transition: transform 1.2s ease-in-out;
-}
-
-.fadein-exit-done {
-  transform: scale(0);
 }
 
 .run-in-enter {
@@ -129,5 +94,17 @@ i {
   opacity: 0;
   transform-origin: center;
   transform: translateX(100%) scaleX(0);
+}
+
+@media (min-width:1200px) {
+  .about>p {
+    margin: 0 15vw;
+    font-size: 2.5rem;
+  }
+  .skill-list {
+    margin: 100px 15vw;
+    grid-template-columns: repeat(5,80px);
+    gap: 100px;
+  }
 }
 

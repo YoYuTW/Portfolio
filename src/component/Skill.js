@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
+import './Skill.css'
 
 function Skill(props) {
   const nodeRef = useRef(null);

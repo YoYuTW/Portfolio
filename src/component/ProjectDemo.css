@@ -2,6 +2,7 @@
   border: 1px #fff solid;
   height: 100vw;
   margin: 0 10vw;
+  background-color: rgb(19,25,28);
 }
 
 .project-card>img {
@@ -9,5 +10,41 @@
   object-fit: cover;
 }
 .project-card>p {
-  height: 20%;
+  margin: 0 10%;
+  height: 25%;
+  font-size: 1.1rem;
 }
+
+.project-buttons {
+  display: flex;
+  margin: auto 10%;
+  justify-content: flex-end;
+  gap: 1rem;
+  height: 15%;
+  align-items: center;  
+}
+
+@media (min-width:1200px) {
+  .project-card {
+    height: 40vw;
+  }
+  .project-card>img {
+    height: 50%;
+    object-fit: contain;  
+  }
+  .project-card>h3 {
+    font-size: 3rem;
+  }
+  .project-card>p {
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+    height: 10%;
+  }
+  .project-buttons {
+    gap: 50px;
+  }
+  .project-buttons>* {
+    transform: scale(1.5) translateX(-15%);
+  }
+}
+
