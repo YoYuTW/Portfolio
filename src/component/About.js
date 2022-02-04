@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { FormattedMessage } from "react-intl";
 import "./About.css";
 import Skill from "./Skill";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -37,7 +38,6 @@ function About() {
     jest: "devicon-jest-plain colored",
     webpack: "devicon-webpack-plain",
     sass: "devicon-sass-original colored",
-    TypeScript: "devicon-typescript-plain",
   };
 
   return (
@@ -48,7 +48,9 @@ function About() {
         timeout={2000}
         nodeRef={aboutRef}      
       >
-        <h2 ref={aboutRef}>About me</h2>
+        <h2 ref={aboutRef}>
+          <FormattedMessage id="app.aboutMe" defaultMessage="About me" />
+        </h2>
       </CSSTransition>
       <CSSTransition
         in={scrollHeight > 0.33}
@@ -57,9 +59,11 @@ function About() {
         nodeRef={paraRef}
       >
         <p ref={paraRef}>
-          My first encounter with JavaScript happened one and half year ago, when I was a project manager intern,
+          <FormattedMessage id='app.aboutPara' defaultMessage="My first encounter with JavaScript happened one and half year ago, when I was a project manager intern,
           and the first time I tasted the power of coding.
-          Currently I am a full-time self-taught coder followed with <a href="https://www.theodinproject.com/">The Odin Project</a>.
+          Currently I am a full-time self-taught coder followed with The Odin Project." 
+          values={{ top: <a href="https://www.theodinproject.com/" target="_blank" rel="noreferrer">The Odin Project</a>}}/>
+          
         </p>
       </CSSTransition>
       <CSSTransition
@@ -68,7 +72,9 @@ function About() {
         timeout={2000}     
         nodeRef={skillRef} 
       >
-        <h2 ref={skillRef}>Skills</h2>
+        <h2 ref={skillRef}>
+        <FormattedMessage id="app.skills" defaultMessage="Skills" />
+        </h2>
       </CSSTransition>
       <TransitionGroup className="skill-list">
         {Object.entries(skillList).map(pair =>           

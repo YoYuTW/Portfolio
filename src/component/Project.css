@@ -4,6 +4,24 @@
   align-items: center;
 }
 
+.project>p {
+  margin: 0 0 20px;
+}
+
 .carousel-root {
   overflow: hidden;
+}
+
+li.slide {
+  border: #fff 1px solid;
+}
+
+.control-arrow {
+  width: 5rem;
+}
+
+@media (min-width: 1200px) {
+  .project>p {
+    font-size: 2rem;
+  }
 }
