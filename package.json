@@ -1,6 +1,6 @@
 {
   "name": "yoyu-portfolio",
-  "homepage": "https://github.com/YoYuTW/Portfolio/blob/gh-pages/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
