@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.8b8c93f4.css",
-    "main.js": "/Portfolio/static/js/main.287b3949.js",
-    "static/js/787.c84fcee8.chunk.js": "/Portfolio/static/js/787.c84fcee8.chunk.js",
-    "static/media/signup.png": "/Portfolio/static/media/signup.50a1643704adda86c569.png",
-    "static/media/admindashboard.png": "/Portfolio/static/media/admindashboard.730215572b4dbadb40a5.png",
-    "static/media/memorycard.png": "/Portfolio/static/media/memorycard.15aca87a04987a67836b.png",
-    "static/media/taipei101-desktop.jpeg": "/Portfolio/static/media/taipei101-desktop.c13e8b76c4024db3888a.jpeg",
-    "static/media/shoppingcart.png": "/Portfolio/static/media/shoppingcart.9e45a63ab47a9119a1c8.png",
-    "static/media/pttcrawler.png": "/Portfolio/static/media/pttcrawler.f75a96ddc5809dc35b82.png",
-    "static/media/taipei101.jpeg": "/Portfolio/static/media/taipei101.fa529e63eccfe0d28d79.jpeg",
-    "static/media/littlelibrary.png": "/Portfolio/static/media/littlelibrary.e2de8546aaa160f5014e.png",
-    "static/media/weatherapp.png": "/Portfolio/static/media/weatherapp.355fa21684432d0ae9de.png",
-    "index.html": "/Portfolio/index.html",
-    "main.8b8c93f4.css.map": "/Portfolio/static/css/main.8b8c93f4.css.map",
-    "main.287b3949.js.map": "/Portfolio/static/js/main.287b3949.js.map",
-    "787.c84fcee8.chunk.js.map": "/Portfolio/static/js/787.c84fcee8.chunk.js.map"
+    "main.css": "/static/css/main.6ae12a13.css",
+    "main.js": "/static/js/main.6819f9f0.js",
+    "static/js/787.c84fcee8.chunk.js": "/static/js/787.c84fcee8.chunk.js",
+    "static/media/signup.png": "/static/media/signup.50a1643704adda86c569.png",
+    "static/media/admindashboard.png": "/static/media/admindashboard.730215572b4dbadb40a5.png",
+    "static/media/memorycard.png": "/static/media/memorycard.15aca87a04987a67836b.png",
+    "static/media/taipei101-desktop.jpeg": "/static/media/taipei101-desktop.c13e8b76c4024db3888a.jpeg",
+    "static/media/shoppingcart.png": "/static/media/shoppingcart.9e45a63ab47a9119a1c8.png",
+    "static/media/pttcrawler.png": "/static/media/pttcrawler.f75a96ddc5809dc35b82.png",
+    "static/media/taipei101.jpeg": "/static/media/taipei101.fa529e63eccfe0d28d79.jpeg",
+    "static/media/littlelibrary.png": "/static/media/littlelibrary.e2de8546aaa160f5014e.png",
+    "static/media/weatherapp.png": "/static/media/weatherapp.355fa21684432d0ae9de.png",
+    "index.html": "/index.html",
+    "main.6ae12a13.css.map": "/static/css/main.6ae12a13.css.map",
+    "main.6819f9f0.js.map": "/static/js/main.6819f9f0.js.map",
+    "787.c84fcee8.chunk.js.map": "/static/js/787.c84fcee8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b8c93f4.css",
-    "static/js/main.287b3949.js"
+    "static/css/main.6ae12a13.css",
+    "static/js/main.6819f9f0.js"
   ]
 }
