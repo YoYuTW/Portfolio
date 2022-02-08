@@ -2,7 +2,7 @@ import memorycard from './memorycard.png';
 import shoppingcart from './shoppingcart.png';
 import admindashboard from './admindashboard.png';
 import weatherapp from './weatherapp.png';
-import library from './littlelibrary.png';
+import inventoryApp from './inventoryApp.png';
 import signup from './signup.png';
 import crawler from './pttcrawler.png';
 
@@ -36,11 +36,11 @@ const projects = [
     live: 'https://yoyutw.github.io/weather-app/',
   },
   {
-    name: 'Project: Library',
-    description: `Create, read, update and delete books in this little library.`,
-    img: library,
-    github: 'https://github.com/YoYuTW/local-library',
-    live: 'https://whispering-brushlands-56060.herokuapp.com/catalog',
+    name: 'Project: Inventory Managing System',
+    description: `Inventory managing system for I-KE-A, definite not a Sweden company.`,
+    img: inventoryApp,
+    github: 'https://github.com/YoYuTW/inventory-app',
+    live: 'https://obscure-retreat-56413.herokuapp.com/branch',
   },
   {
     name: 'Project: Sign Up',
