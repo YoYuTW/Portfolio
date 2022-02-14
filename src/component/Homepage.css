@@ -1,18 +1,24 @@
 .homepage {
   background-image: url('../asset/taipei101.jpeg'); /*攝影師：Timo Volz，連結：Pexels*/
+  background-position-x: -15px;
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;  
   display: flex;
-  justify-content: flex-end;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.homepage>div:first-child {
+  align-self: end;
+  padding: 15px 20px;
+  font-family: "Playfair Display", serif;
 }
 
 .homepage>div>h1 {
-  font-family: "Playfair Display", serif;    
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: rgba(0,0,0,0.3);
-  margin: 0;  
+  text-align: center;  
+  margin: 0 0 2rem;  
 }
 
 .homepage>div>*.chinese {
@@ -20,13 +26,10 @@
   font-weight: normal;
 }
 
-.homepage>div>h3 {
-  font-family: "Playfair Display", serif;
+.homepage>div>h3 {  
   font-style: italic;  
-  text-align: center;
-  padding: 0 1rem 1.2rem;  
+  text-align: center;  
   margin: 0;
-  background-color: rgba(0,0,0,0.3);
 }
 
 .language {
@@ -58,21 +61,25 @@
   font-weight: bold;
 }
 
+.homepage>p {
+  padding:1rem 5vw;
+  background-color: rgba(0,0,0,0.6);
+}
+
 @media (min-width: 1200px) {
   .homepage {
     background-image: url('../asset/taipei101-desktop.jpeg'); /*攝影師：Timo Volz，連結：Pexels*/
-    background-position: center;
-    background-size: contain;
-    height: 60vh;
-    width: 90vw;
-    margin: 0 5vw;
-    justify-content: center;
-    border-bottom: 2px #fff solid;    
+    background-position: 100% 0;
+    margin: 0 5vw;  
     font-size: 3rem;
   }
 
+  .homepage>div:first-child {
+    padding: 2rem 3rem;
+  }
+
   .language {
-    left: 90vw;
+    left: 5vw;
   }
   
 }

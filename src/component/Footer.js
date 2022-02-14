@@ -5,9 +5,9 @@ import './Footer.css';
 function Footer() {
   return (
     <footer>
-      <h2>
+      <h3>
         <FormattedMessage id="app.footer" defaultMessage="Contact Me"/>
-      </h2>
+      </h3>
       <div>
         <a href="mailto:atp6u4m4a@gmail.com">
           <svg width='24' viewBox="0 0 24 24">

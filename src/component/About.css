@@ -1,5 +1,6 @@
 .about {
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .about>h2 {
@@ -15,7 +16,7 @@
   display: grid;
   grid-template-columns: repeat(3,80px);
   grid-template-rows: repeat(auto-fit,130px);
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 10px 30px;
   gap:10px 20px;
 }

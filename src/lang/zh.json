@@ -2,7 +2,7 @@
   "app.myName": "陳宥諭",
   "app.myCity": "二轉中",
   "app.aboutMe": "關於我",
-  "app.aboutPara": "在前份工作中認識了JavaScript，卻只用在處理 Google 的試算表。在離職後決定轉職，目前跟著 {top} 逐步成為軟體工程師。",
+  "app.aboutPara": "在前份工作中認識了JavaScript，在當中發現了無窮的樂趣。{br}目前跟著 {top} 的腳步，逐漸成為全端工程師當中。",
   "app.skills": "技能",
   "app.project": "作品集",
   "app.projectIntro": "可使用方向鍵或左右滑動來瀏覽我的作品",

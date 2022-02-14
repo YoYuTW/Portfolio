@@ -1,7 +1,16 @@
-.project-gallery {
-  margin-bottom: 20px;
+.project {
+  height: 85vh;
+  padding-top: 2rem;
+  box-sizing: border-box;
+}
+
+.project>h2 {
+  margin-top: 0;
+}
+
+.project-gallery {  
   display: flex;
-  align-items: center;
+  align-items: center;  
 }
 
 .project>p {
@@ -12,9 +21,11 @@
   overflow: hidden;
 }
 
+/*
 li.slide {
   border: #fff 1px solid;
 }
+*/
 
 .control-arrow {
   width: 5rem;

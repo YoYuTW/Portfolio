@@ -3,33 +3,37 @@
   height: 100vw;
   margin: 0 10vw;
   background-color: rgb(19,25,28);
+  position: relative;
 }
 
 .project-card>img {
   height: 42%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .project-card>p {
-  margin: 0 10%;
+  margin: 0 10px ;
   height: 25%;
   font-size: 1.1rem;
 }
 
 .project-buttons {
   display: flex;
-  margin: auto 10%;
+  margin: 10px;
   justify-content: flex-end;
   gap: 1rem;
-  height: 15%;
+  height: 5%;
   align-items: center;  
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
 
 @media (min-width:1200px) {
   .project-card {
-    height: 40vw;
+    height: 60vh;
   }
   .project-card>img {
-    height: 50%;
+    height: 70%;
     object-fit: contain;  
   }
   .project-card>h3 {

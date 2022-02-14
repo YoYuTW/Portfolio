@@ -20,6 +20,15 @@ function Homepage() {
         /
         <button id="en" onClick={context.selectLanguage}>En</button>
       </div>
+      <p>
+        <FormattedMessage id='app.aboutPara' defaultMessage="My first encounter with JavaScript happened one and half year ago, when I was a project manager intern,
+          and the first time I tasted the power of coding.
+          Currently I am a full-time self-taught coder followed with The Odin Project." 
+          values={{ 
+            top: <a href="https://www.theodinproject.com/" target="_blank" rel="noreferrer">The Odin Project</a>,
+            br: <br />
+          }}/>
+      </p>
     </div>
   )
 };

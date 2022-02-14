@@ -5,25 +5,40 @@ import Skill from "./Skill";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function About() {  
-  const [scrollHeight, setScrollHeight] = useState(0);
-  const aboutRef = useRef(null);
+  const scrollHeight = useRef(0);
+  const [wheelHeight, setWheelHeight] = useState(0);
   const skillRef = useRef(null);
-  const paraRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener('scroll', listenToScroll);
-    return () => 
-      (window.removeEventListener('scroll', listenToScroll))
+    window.addEventListener('wheel', listenToWheel);
+    return () => {
+      window.removeEventListener('wheel', listenToWheel)
+    }      
   });
 
-  const listenToScroll = () => {    
-    const winScroll = document.documentElement.scrollTop;
+  const height = document.documentElement.clientHeight;
 
-    const height = document.documentElement.clientHeight;
-
-    const scrolled = winScroll / height;
-    setScrollHeight(scrolled);
-  }
+  const listenToWheel = (e) => {    
+    scrollHeight.current += e.deltaY;
+    if (scrollHeight.current > 300) {
+      setWheelHeight(prev => {
+        return prev >= 2 ? 2 : prev + 1
+      });
+      scrollHeight.current = 0;
+    } else if (scrollHeight.current < -300) {
+      setWheelHeight(prev => {
+        return prev <= 0 ? 0 : prev - 1
+      });      
+      scrollHeight.current = 0;
+    }    
+  };
+  
+  useEffect(() => {    
+    window.scrollTo({
+      top: wheelHeight * height,
+      behavior: "smooth",
+    })
+  }, [wheelHeight]);
 
   const skillList = {
     HTML5: "devicon-html5-plain colored",
@@ -41,44 +56,13 @@ function About() {
   };
 
   return (
-    <div className="about">   
-      <CSSTransition
-        in={scrollHeight > 0.3}
-        classNames="run-in"
-        timeout={2000}
-        nodeRef={aboutRef}      
-      >
-        <h2 ref={aboutRef}>
-          <FormattedMessage id="app.aboutMe" defaultMessage="About me" />
-        </h2>
-      </CSSTransition>
-      <CSSTransition
-        in={scrollHeight > 0.33}
-        classNames='contents'
-        timeout={2000} 
-        nodeRef={paraRef}
-      >
-        <p ref={paraRef}>
-          <FormattedMessage id='app.aboutPara' defaultMessage="My first encounter with JavaScript happened one and half year ago, when I was a project manager intern,
-          and the first time I tasted the power of coding.
-          Currently I am a full-time self-taught coder followed with The Odin Project." 
-          values={{ top: <a href="https://www.theodinproject.com/" target="_blank" rel="noreferrer">The Odin Project</a>}}/>
-          
-        </p>
-      </CSSTransition>
-      <CSSTransition
-        in={scrollHeight > 0.45}
-        classNames="run-in"
-        timeout={2000}     
-        nodeRef={skillRef} 
-      >
-        <h2 ref={skillRef}>
+    <div className="about">    
+      <h2 ref={skillRef}>
         <FormattedMessage id="app.skills" defaultMessage="Skills" />
-        </h2>
-      </CSSTransition>
+      </h2>
       <TransitionGroup className="skill-list">
         {Object.entries(skillList).map(pair =>           
-          <Skill key={pair[0]} name={pair[0]} link={pair[1]} scrollHeight={scrollHeight}/>)}
+          <Skill key={pair[0]} name={pair[0]} link={pair[1]} scrollHeight={wheelHeight}/>)}
       </TransitionGroup>      
     </div>
   )
@@ -86,4 +70,3 @@ function About() {
 
 export default About;
 
-//<h2 className={scrollHeight > 0.3 ? `showTitle` : ``}>About me</h2>

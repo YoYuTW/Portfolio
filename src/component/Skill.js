@@ -6,7 +6,7 @@ function Skill(props) {
   const nodeRef = useRef(null);
   return(
     <CSSTransition 
-      in={props.scrollHeight > 0.5}
+      in={props.scrollHeight === 1}
       classNames="fadein"
       nodeRef={nodeRef}
       timeout={2000} 
