@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.92758498.css",
-    "main.js": "./static/js/main.9b0ff2cb.js",
+    "main.css": "./static/css/main.72d155d2.css",
+    "main.js": "./static/js/main.508db963.js",
     "static/js/787.c84fcee8.chunk.js": "./static/js/787.c84fcee8.chunk.js",
     "static/media/signup.png": "./static/media/signup.50a1643704adda86c569.png",
     "static/media/admindashboard.png": "./static/media/admindashboard.730215572b4dbadb40a5.png",
@@ -13,12 +13,12 @@
     "static/media/taipei101.jpeg": "./static/media/taipei101.fa529e63eccfe0d28d79.jpeg",
     "static/media/weatherapp.png": "./static/media/weatherapp.355fa21684432d0ae9de.png",
     "index.html": "./index.html",
-    "main.92758498.css.map": "./static/css/main.92758498.css.map",
-    "main.9b0ff2cb.js.map": "./static/js/main.9b0ff2cb.js.map",
+    "main.72d155d2.css.map": "./static/css/main.72d155d2.css.map",
+    "main.508db963.js.map": "./static/js/main.508db963.js.map",
     "787.c84fcee8.chunk.js.map": "./static/js/787.c84fcee8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92758498.css",
-    "static/js/main.9b0ff2cb.js"
+    "static/css/main.72d155d2.css",
+    "static/js/main.508db963.js"
   ]
 }
