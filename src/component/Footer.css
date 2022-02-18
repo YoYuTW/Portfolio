@@ -9,7 +9,7 @@ footer {
 
 footer>h3 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
 
 footer>div {
@@ -23,6 +23,10 @@ footer>div {
     height: 20vh;
     gap: 50px;
   }
+  footer>h3 {
+    font-size: 3rem;
+  }
+  
   footer>div {
     gap: 100px;
   }

@@ -2,21 +2,33 @@ import React, { useEffect, useState, useRef } from "react";
 import { FormattedMessage } from "react-intl";
 import "./About.css";
 import Skill from "./Skill";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { TransitionGroup } from "react-transition-group";
 
 function About() {  
   const scrollHeight = useRef(0);
   const [wheelHeight, setWheelHeight] = useState(0);
+  const [isMoible, setIsMobile] = useState(false);
   const skillRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener('wheel', listenToWheel);
-    return () => {
-      window.removeEventListener('wheel', listenToWheel)
-    }      
-  });
+    if (document.documentElement.clientWidth <= 1366) { 
+      setIsMobile(true)
+    }
+  }, []);
 
-  const height = document.documentElement.clientHeight;
+  useEffect(() => {
+    if (!isMoible) {
+      window.addEventListener('wheel', listenToWheel);
+      document.body.style.overflow = "hidden";
+      console.log("is not mobile");
+      return () => {
+        window.removeEventListener('wheel', listenToWheel);
+        document.body.style.overflow = "visible";
+      }   
+    } else {
+      console.log("is mobile")
+    }  
+  }, [isMoible]);  
 
   const listenToWheel = (e) => {    
     scrollHeight.current += e.deltaY;
@@ -34,11 +46,14 @@ function About() {
   };
   
   useEffect(() => {    
-    window.scrollTo({
-      top: wheelHeight * height,
-      behavior: "smooth",
-    })
-  }, [wheelHeight]);
+    if (!isMoible) {
+      const height = document.documentElement.clientHeight;
+      window.scrollTo({
+        top: wheelHeight * height,
+        behavior: "smooth",
+      });
+    }
+  }, [wheelHeight, isMoible]);
 
   const skillList = {
     HTML5: "devicon-html5-plain colored",
