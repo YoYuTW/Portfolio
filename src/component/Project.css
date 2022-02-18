@@ -21,17 +21,14 @@
   overflow: hidden;
 }
 
-/*
-li.slide {
-  border: #fff 1px solid;
-}
-*/
-
 .control-arrow {
   width: 5rem;
 }
 
 @media (min-width: 1200px) {
+  .project {
+    height: 80vh;
+  }
   .project>p {
     font-size: 2rem;
   }

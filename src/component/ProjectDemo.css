@@ -30,14 +30,15 @@
 
 @media (min-width:1200px) {
   .project-card {
-    height: 60vh;
+    height: 50vh;
   }
   .project-card>img {
-    height: 70%;
+    height: 60%;
     object-fit: contain;  
   }
   .project-card>h3 {
     font-size: 3rem;
+    margin-top: 10px;
   }
   .project-card>p {
     font-size: 1.5rem;
