@@ -6,7 +6,12 @@ import { Context } from './Wrapper';
 function Homepage() {
   const context = useContext(Context);
   return (
-    <div className="homepage">   
+    <div className="homepage">         
+      <div className="language">
+        <button className="language-select" onClick={context.selectLanguage} id="zh-TW">中</button>
+        /
+        <button id="en" onClick={context.selectLanguage}>En</button>
+      </div>
       <div>
         <h1 className={context.locale === 'zh-TW' ? 'chinese' : null}>
           <FormattedMessage id="app.myName" defaultMessage="Chen YouYu" />
@@ -14,11 +19,6 @@ function Homepage() {
         <h3 className={context.locale === 'zh-TW' ? 'chinese' : null}>
           <FormattedMessage id="app.myCity" defaultMessage="Taipei, Taiwan" />
         </h3>
-      </div>
-      <div className="language">
-        <button className="language-select" onClick={context.selectLanguage} id="zh-TW">中</button>
-        /
-        <button id="en" onClick={context.selectLanguage}>En</button>
       </div>
       <p>
         <FormattedMessage id='app.aboutPara' defaultMessage="My first encounter with JavaScript happened one and half year ago, when I was a project manager intern,

@@ -97,7 +97,7 @@
   transform: translateX(100%) scaleX(0);
 }
 
-@media (min-width:1200px) {
+@media (min-width: 768px) {
   .about>p {
     margin: 0 15vw;
     font-size: 2.5rem;

@@ -3,20 +3,20 @@
   background-position-x: -15px;
   background-size: cover;
   height: 100vh;
-  background-repeat: no-repeat;  
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  align-items: center;  
+  background-repeat: no-repeat;    
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
 }
 
-.homepage>div:first-child {
-  align-self: end;
+.homepage>div:nth-child(2) {
+  place-self: start end;
   padding: 15px 20px;
   font-family: "Playfair Display", serif;
 }
 
 .homepage>div>h1 {
+  grid-area: 1/2/2/3;
   text-align: center;  
   margin: 0 0 2rem;  
 }
@@ -33,9 +33,8 @@
 }
 
 .language {
-  position: absolute;
-  top: 0;
-  left: 0;
+  grid-area: 1/1/2/2;
+  place-self: start start;
   width: 5rem;
   display: flex;
   font-size: 1.2rem;
@@ -62,11 +61,13 @@
 }
 
 .homepage>p {
+  place-self: end center;
+  grid-area: 2/1/3/3;
   padding:1rem 5vw;
   background-color: rgba(0,0,0,0.6);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .homepage {
     background-image: url('../asset/taipei101-desktop.jpeg'); /*攝影師：Timo Volz，連結：Pexels*/
     background-position: 100% 0;
@@ -76,10 +77,5 @@
 
   .homepage>div:first-child {
     padding: 2rem 3rem;
-  }
-
-  .language {
-    left: 5vw;
-  }
-  
+  } 
 }

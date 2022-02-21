@@ -28,7 +28,7 @@ i {
   transform: scale(0);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .fadein-enter {
     transform: scale(0);
   }
