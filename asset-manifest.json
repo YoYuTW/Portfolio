@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "./static/css/main.682f3c4a.css",
-    "main.js": "./static/js/main.9017e80f.js",
+    "main.css": "./static/css/main.07b0e387.css",
+    "main.js": "./static/js/main.0950aaaf.js",
     "static/js/787.c84fcee8.chunk.js": "./static/js/787.c84fcee8.chunk.js",
     "static/media/signup.png": "./static/media/signup.50a1643704adda86c569.png",
-    "static/media/admindashboard.png": "./static/media/admindashboard.730215572b4dbadb40a5.png",
+    "static/media/dashboard.png": "./static/media/dashboard.560067a8a7b60e3b7ba5.png",
     "static/media/inventoryApp.png": "./static/media/inventoryApp.471c3d683435890fe797.png",
     "static/media/memorycard.png": "./static/media/memorycard.15aca87a04987a67836b.png",
     "static/media/taipei101-desktop.jpeg": "./static/media/taipei101-desktop.c13e8b76c4024db3888a.jpeg",
@@ -13,12 +13,12 @@
     "static/media/taipei101.jpeg": "./static/media/taipei101.fa529e63eccfe0d28d79.jpeg",
     "static/media/weatherapp.png": "./static/media/weatherapp.355fa21684432d0ae9de.png",
     "index.html": "./index.html",
-    "main.682f3c4a.css.map": "./static/css/main.682f3c4a.css.map",
-    "main.9017e80f.js.map": "./static/js/main.9017e80f.js.map",
+    "main.07b0e387.css.map": "./static/css/main.07b0e387.css.map",
+    "main.0950aaaf.js.map": "./static/js/main.0950aaaf.js.map",
     "787.c84fcee8.chunk.js.map": "./static/js/787.c84fcee8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.682f3c4a.css",
-    "static/js/main.9017e80f.js"
+    "static/css/main.07b0e387.css",
+    "static/js/main.0950aaaf.js"
   ]
 }
