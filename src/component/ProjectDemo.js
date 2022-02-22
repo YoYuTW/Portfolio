@@ -5,8 +5,6 @@ function ProjectDemo(props) {
   return (
     <div className='project-card'>
       <img src={props.img} alt={props.name} />   
-      <h3>{props.name}</h3>      
-      <p>{props.description}</p>
       <div className="project-buttons">
         <a href={props.github} target="_blank" rel='noreferrer'>
           <svg width='24' viewBox="0 0 128 128">
@@ -22,7 +20,8 @@ function ProjectDemo(props) {
           </svg>
         </a>
       </div>
-      
+      <h3>{props.name}</h3>      
+      <p>{props.description}</p>     
     </div>
   )
 };

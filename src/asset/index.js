@@ -1,6 +1,6 @@
 import memorycard from './memorycard.png';
 import shoppingcart from './shoppingcart.png';
-import admindashboard from './admindashboard.png';
+import admindashboard from './dashboard.png';
 import weatherapp from './weatherapp.png';
 import inventoryApp from './inventoryApp.png';
 import signup from './signup.png';
@@ -18,8 +18,8 @@ const projects = [
     name: 'Project: Dashboard',
     description: 'CSS grid practice.',
     img: admindashboard,
-    github: 'https://github.com/YoYuTW/admin-dashboard',
-    live: 'https://yoyutw.github.io/admin-dashboard/',
+    github: 'https://github.com/YoYuTW/admin-dashboard-react',
+    live: 'https://yoyutw.github.io/admin-dashboard-react/',
   },
   {
     name: 'Project: Memory card',
