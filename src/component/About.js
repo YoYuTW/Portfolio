@@ -7,7 +7,9 @@ import { TransitionGroup } from "react-transition-group";
 function About() {  
   const scrollHeight = useRef(0);
   const [wheelHeight, setWheelHeight] = useState(0);
-  const [isMoible, setIsMobile] = useState(false);
+  const [isMoible, setIsMobile] = useState(false);  
+  const [skillList, setSkillList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const skillRef = useRef(null);
 
   useEffect(() => {
@@ -20,14 +22,11 @@ function About() {
     if (!isMoible) {
       window.addEventListener('wheel', listenToWheel);
       document.body.style.overflow = "hidden";
-      console.log("is not mobile");
       return () => {
         window.removeEventListener('wheel', listenToWheel);
         document.body.style.overflow = "visible";
       }   
-    } else {
-      console.log("is mobile")
-    }  
+    } 
   }, [isMoible]);  
 
   const listenToWheel = (e) => {    
@@ -55,30 +54,42 @@ function About() {
     }
   }, [wheelHeight, isMoible]);
 
-  const skillList = {
-    HTML5: "devicon-html5-plain colored",
-    CSS3: "devicon-css3-plain colored",
-    JavaScript: "devicon-javascript-plain colored",
-    ReactJS: "devicon-react-original colored",
-    Nodejs: "devicon-nodejs-plain",
-    express: "devicon-express-original colored",
-    MongoDB: "devicon-mongodb-plain",
-    vscode: "devicon-vscode-plain colored",
-    git: "devicon-git-plain",
-    jest: "devicon-jest-plain colored",
-    webpack: "devicon-webpack-plain",
-    sass: "devicon-sass-original colored",
-  };
+  useEffect(() => {
+    async function fetchSkills() {
+      setIsLoading(true)
+      const response = await fetch(`${process.env.REACT_APP_API}api/skills`);
+      setIsLoading(false)
+      const data = await response.json();
+      setSkillList(data.skills);
+    };
+    fetchSkills();
+  }, []);  
+
+  const getSkills = () => {
+    if (isLoading) {
+      return (
+        <div className="lds-ring">
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
+      )
+    }
+    return (
+      <TransitionGroup className="skill-list">
+        {skillList.map(skill =>           
+          <Skill id={skill._id} key={skill._id} name={skill.name} link={skill.link} scrollHeight={wheelHeight}/>)}
+      </TransitionGroup> 
+    )
+  }
 
   return (
     <div className="about">    
       <h2 ref={skillRef}>
         <FormattedMessage id="app.skills" defaultMessage="Skills" />
       </h2>
-      <TransitionGroup className="skill-list">
-        {Object.entries(skillList).map(pair =>           
-          <Skill key={pair[0]} name={pair[0]} link={pair[1]} scrollHeight={wheelHeight}/>)}
-      </TransitionGroup>      
+      {getSkills()}     
     </div>
   )
 };

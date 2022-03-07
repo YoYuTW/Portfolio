@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.project-card>img {
+.project-card>img {  
   height: 42%;
   object-fit: contain;
 }
@@ -34,6 +34,7 @@
     height: 50vh;
   }
   .project-card>img {
+    max-width: 80%;
     height: 60%;
     object-fit: contain;  
   }

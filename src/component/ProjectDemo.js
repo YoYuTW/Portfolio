@@ -1,10 +1,14 @@
 import React from "react";
 import './ProjectDemo.css'
+import {Buffer} from 'buffer';
 
 function ProjectDemo(props) {
+  const b64 = Buffer.from(props.img.data).toString('base64');
+  const mimeType = 'image/png';
+
   return (
     <div className='project-card'>
-      <img src={props.img} alt={props.name} />   
+      <img src={`data:${mimeType};base64,${b64}`} alt={props.name} />   
       <div className="project-buttons">
         <a href={props.github} target="_blank" rel='noreferrer'>
           <svg width='24' viewBox="0 0 128 128">

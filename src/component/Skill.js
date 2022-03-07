@@ -11,7 +11,7 @@ function Skill(props) {
       nodeRef={nodeRef}
       timeout={2000} 
     >
-      <div className="skill" ref={nodeRef}>
+      <div className="skill" ref={nodeRef} id={props.id}>
         <i className={props.link} />
         <h4>{props.name}</h4>
       </div>
